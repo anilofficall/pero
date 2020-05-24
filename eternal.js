@@ -22,21 +22,12 @@ const log = message => {
 };
 require('./util/eventLoader.js')(client);
 
-client.on('ready', async () => {
-   client.appInfo = await client.fetchApplication();
-  setInterval( async () => {
-    client.appInfo = await client.fetchApplication();
-  }, 60000);
- client.user.setActivity(`CODE MASTER!! CAPTAİN MAMİ`, { type:"WATHING" })
- client.user.setStatus('idle')
-});
-
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir('./komutlar/', (err, files) => {
     if (err) console.error(err);
     log(`${files.length} komut yüklenecek.`);
-    files.forEach(f => {
+    files.forEach(f => {/*CODEMASTER*/
         let props = require(`./komutlar/${f}`);
         log(`Yüklenen komut: ${props.help.name}.`);
         client.commands.set(props.help.name, props);
@@ -64,7 +55,7 @@ client.reload = command => {
             });
             resolve();
         } catch (e) {
-            reject(e);
+         /*CODEMASTER*/   reject(e);
         }
     });
 };
@@ -112,6 +103,6 @@ client.elevation = message => {
     if (message.member.hasPermission("BAN_MEMBERS")) permlvl = 2;
     if (message.member.hasPermission("ADMINISTRATOR")) permlvl = 3;
     if (message.author.id === ayarlar.sahip) permlvl = 4;
-    return permlvl;
+    return permlvl;/*CODEMASTER CAPTAİN MAMİ*/
 };
 client.login(ayarlar.token)
