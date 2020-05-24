@@ -7,7 +7,7 @@ exports.conf = {
 }
 
 exports.help = {
-	name: 'komutlar',
+	name: 'avatar', 
 	description: '',
 	usage: ''
 }
