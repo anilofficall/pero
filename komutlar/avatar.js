@@ -12,9 +12,9 @@ exports.help = {
 	usage: ''
 }
 // Ben CaptainMami Nasıl Kullanırsanız Öyle Düzenleyin Benim Düzen Bu
-exports.run = async (client, message, args) => {
+exports.run = async (client, message, args) => { // embed yapımınıda gösterdim
       let embed = new Discord.MessageEmbed()
-            .setImage(message.member.AvatarURL)
+            .setImage(message.author.avatarURL()) // avatar kimse yapamamış eklem dedim D: la alt tarafı "()" bu 
             .setColor(`RED`)
             message.channel.send(embed)
   

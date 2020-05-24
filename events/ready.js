@@ -4,7 +4,8 @@ const ayarlar = require('../ayarlar.json');
 var prefix = ayarlar.prefix;
 
 module.exports = client => {
-   client.user.setStatus('idle')
+   client.user.setStatus('idle') 
+  // dnd == rahatsız etme , idle == boşta 
 var oyun = [
          `${prefix}yardım |  | ${client.guilds.size} Sunucu`
     ];
