@@ -1,9 +1,11 @@
-
+const discord = require('discord.js');
 const fs = require('fs');
 const http = require('http');
 const express = require('express');
 const ayarlar = require('./ayarlar.json');
 const app = express();
+
+//UPTİME İÇİN
 
 app.get("/", (request, response) => {
   console.log("Otomatik Bağlama İşlemi Tamamlandı"); // KANKA BU GLİTCH İÇİN VDS GEÇİRCEKSEN SİL BURAYI
@@ -14,6 +16,7 @@ setInterval(() => {
   http.get(`ÜSTE BAK SHOW VAR ONA TIKLA ÇIKAN SİTEDEKİ LİNK AL YAPIŞTIR.`);
 }, 120000)
 
+//UPTİME İÇİN
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
@@ -27,7 +30,7 @@ client.aliases = new Discord.Collection();
 fs.readdir('./komutlar/', (err, files) => {
     if (err) console.error(err);
     log(`${files.length} komut yüklenecek.`);
-    files.forEach(f => {/*CODEMASTER*/
+    files.forEach(f => {
         let props = require(`./komutlar/${f}`);
         log(`Yüklenen komut: ${props.help.name}.`);
         client.commands.set(props.help.name, props);
@@ -55,7 +58,7 @@ client.reload = command => {
             });
             resolve();
         } catch (e) {
-         /*CODEMASTER*/   reject(e);
+           reject(e);
         }
     });
 };
@@ -105,4 +108,4 @@ client.elevation = message => {
     if (message.author.id === ayarlar.sahip) permlvl = 4;
     return permlvl;
 };
-client.login(ayarlar.token)
+client.login(process.env.TOKEN)
