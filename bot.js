@@ -8,36 +8,23 @@ const app = express();
 //UPTİME İÇİN
 
 app.get("/", (request, response) => {
-  console.log("Otomatik Bağlama İşlemi Tamamlandı"); // KANKA BU GLİTCH İÇİN VDS GEÇİRCEKSEN SİL BURAYI
+  console.log("Hergün Yeni Bir Pinge Devamkee");
   response.sendStatus(200);
 });
 app.listen(8000);
 setInterval(() => {
-  http.get(`https://cw-deneme-v12.glitch.me/`);
+  http.get(`https://cw-deneme-v12.glitch.me/`); //Proje Adresini Gir Buraya
 }, 120000)
 
 //UPTİME İÇİN
 
-//READY.JS
-
 const Discord = require('discord.js');
 const client = new Discord.Client();
-client.on('ready', async () => {
-   client.appInfo = await client.fetchApplication();
-  setInterval( async () => {
-    client.appInfo = await client.fetchApplication();
-  }, 600);
-  
- client.user.setActivity(`CodeWork Taner Tolga Tarlacı`, { type:"WATHING" })
-  
-  console.log("CodeWork Akıyor!!")
-});
-
 const log = message => {
   console.log(` ${message}`);
 };
 require('./util/eventLoader.js')(client);
-//READY.JS
+
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
@@ -122,4 +109,6 @@ client.elevation = message => {
     if (message.author.id === ayarlar.sahip) permlvl = 4;
     return permlvl;
 };
+
+
 client.login(process.env.TOKEN)
