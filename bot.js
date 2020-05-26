@@ -13,17 +13,31 @@ app.get("/", (request, response) => {
 });
 app.listen(8000);
 setInterval(() => {
-  http.get(`ÜSTE BAK SHOW VAR ONA TIKLA ÇIKAN SİTEDEKİ LİNK AL YAPIŞTIR.`);
+  http.get(`https://cw-deneme-v12.glitch.me/`);
 }, 120000)
 
 //UPTİME İÇİN
 
+//READY.JS
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
+client.on('ready', async () => {
+   client.appInfo = await client.fetchApplication();
+  setInterval( async () => {
+    client.appInfo = await client.fetchApplication();
+  }, 600);
+  
+ client.user.setActivity(`CodeWork Taner Tolga Tarlacı`, { type:"WATHING" })
+  
+  console.log("CodeWork Akıyor!!")
+});
+
 const log = message => {
   console.log(` ${message}`);
 };
 require('./util/eventLoader.js')(client);
+//READY.JS
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
