@@ -1,18 +1,22 @@
-const Discord = require('discord.js')
-exports.run = (client, message) => {
-let embed = new Discord.MessageEmbed()
-.setColor('RED')
-.setTitle('İşte Avatarın ;')
-.setDescription(`${message.author.avatarURL()}`)
-message.channel.send(codepackembed)
-}
+const Discord = require("discord.js");
+exports.run = function(client, message, args) {
+let user;  
+if (message.mentions.users.first()) {
+user = message.mentions.users.first();
+    } else {
+        user = message.author;}
+return message.channel.send(new Discord.MessageEmbed()
+.setColor(`RANDOM`)
+.setDescription(`**${user.tag}** İşte Avatarın;`)
+.setImage(user.avatarURL()))
+};  
+
 exports.conf = {
-    enabled: false,
-    guildOnly: false,
+  enabled: true, 
+  guildOnly: true, 
   aliases: [],
-    permLevel: 0
-  };
-  
-  exports.help = {
-    name: 'avatar'
-  };
+  permLevel: 0 
+};
+exports.help = {
+  name: 'avatar'
+};
