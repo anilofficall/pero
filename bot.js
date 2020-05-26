@@ -37,7 +37,10 @@ const log = message => {
   console.log(` ${message}`);
 };
 require('./util/eventLoader.js')(client);
-//READY.JS
+
+//READY.JS SON
+
+//KOMUT ALGILAYICI
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
@@ -111,6 +114,7 @@ client.unload = command => {
     });
 };
 
+//KOMUT ALGILAYICI SON
 
 client.elevation = message => {
     if (!message.guild) {
