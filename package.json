@@ -7,7 +7,7 @@
   "description": "Eternal Bot V12.2.0 Sade Altyapı",
   "main": "eternal.js",
   "scripts": {
-    "start": "node eternal.js"
+    "start": "node bot.js"
   },
   "dependencies": {
     "express": "^4.17.1",
