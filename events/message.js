@@ -1,19 +1,15 @@
-module.exports = message => {
-  let client = message.client;
+const prefix = process.env.PREFIX;
+
+module.exports = (client, message) => {
   if (message.author.bot) return;
-  if (!message.content.startsWith(client.env.Prefix)) return;
-  let command = message.content.split(" ")[0].slice(client.env.Prefix.length);
-  let params = message.content.split(" ").slice(1);
-  let perms = client.elevation(message);
-  let cmd;
-  if (client.commands.has(command)) {
-    cmd = client.commands.get(command);
-  } else if (client.aliases.has(command)) {
-    cmd = client.commands.get(client.aliases.get(command));
-  }
-  if (cmd) {
-    if(cmd.conf.enabled == false) return message.reply("Bu Kod Bakımda Veya Kullanıma Kapalı!")
-    if (perms < cmd.conf.permLevel) return;
-    cmd.run(client, message, params, perms);
-  }
+  if (message.channel.type == "dm") return;
+
+  const msgArr = message.content.split(/\s+/g);
+  const command = msgArr[0];
+  const args = msgArr.slice(1);
+
+  if (!command.startsWith(prefix)) return;
+
+  let cmd = client.commands.get(command.slice(prefix.length));
+  if (cmd) cmd.run(client, message, args);
 };
