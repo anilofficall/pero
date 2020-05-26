@@ -18,14 +18,26 @@ setInterval(() => {
 
 //UPTİME İÇİN
 
+//READY.JS
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
+client.on('ready', async () => {
+   client.appInfo = await client.fetchApplication();
+  setInterval( async () => {
+    client.appInfo = await client.fetchApplication();
+  }, 60000);
+  
+ client.user.setActivity(`youtube.com/codework`, { type:"WATHING" })
+});
+
 const log = message => {
   console.log(` ${message}`);
 };
+
+//READY.JS
+
 require('./util/eventLoader.js')(client);
-
-
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir('./komutlar/', (err, files) => {
