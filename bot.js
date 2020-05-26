@@ -28,16 +28,17 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 60000);
   
- client.user.setActivity(`youtube.com/codework`, { type:"WATHING" })
+ client.user.setActivity(`Ne Bileyim`, { type:"WATHING" })
+  
+  console.log("CodeWork V12 Aktif!")
 });
-
 const log = message => {
   console.log(` ${message}`);
 };
+require('./util/eventLoader.js')(client);
 
 //READY.JS
 
-require('./util/eventLoader.js')(client);
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir('./komutlar/', (err, files) => {
