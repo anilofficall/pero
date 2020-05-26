@@ -11,15 +11,14 @@ if (!message.guild) {
   return message.author.send(ozelmesajuyari); }
   let guild = message.guild
   let reason = args.slice(1).join(' ');
-  let user = message.mentions.users.first();
+  let dızcılaraselam = message.mentions.users.first();
 
   if (message.mentions.users.size < 1) return message.channel.send(`Lütfen sunucudan yasaklayacağınız kişiyi etiketleyin.`).catch(console.error);
 
-  if (!message.guild.member(user).bannable) return message.channel.send(`❌ Belirttiğiniz kişiyi sunucudan yasaklayamam çünkü sunucuda benden daha üstün bir rolü var.`);
-  message.guild.member(user).ban();
+  if (!message.guild.member(dızcılaraselam).bannable) return message.channel.send(`❌ Belirttiğiniz kişinin Yetkisi Benden Daha Üstün!`);
+  message.guild.member(dızcılaraselam).ban();
 
-  message.channel.send(" Başarıyla " + user + " adlı kullanıcı **" + reason + "** sebebiyle sunucudan yasaklandı.")
-   user.send(`Merhaba, **${guild.name}** adlı sunucudan **${reason}** sebebi ile ** ${message.author.username}** adlı yetkili tarafından yasaklandınız!`)
+  message.channel.send(" Başarılı, " + dızcılaraselam + " İD'li kullanıcı **" + reason + "** sebebiyle sunucudan yasaklandı.")
      
 };
 

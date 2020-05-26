@@ -8,12 +8,12 @@ const app = express();
 //UPTİME İÇİN
 
 app.get("/", (request, response) => {
-  console.log("Otomatik Bağlama İşlemi Tamamlandı"); // KANKA BU GLİTCH İÇİN VDS GEÇİRCEKSEN SİL BURAYI
+  console.log("Hergün Yeni Bir Pinge Selamkee!!");
   response.sendStatus(200);
 });
 app.listen(8000);
 setInterval(() => {
-  http.get(`https://cw-deneme-v12.glitch.me/`);
+  http.get(`https://cw-deneme-v12.glitch.me/`); //ALTYAPI ADRESİNİ GİRİN.
 }, 120000)
 
 //UPTİME İÇİN
