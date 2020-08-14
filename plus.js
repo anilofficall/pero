@@ -4,22 +4,6 @@ const http = require('http');
 const express = require('express');
 const ayarlar = require('./ayarlar.json');
 const app = express();
-
-//UPTİME İÇİN
-
-app.get("/", (request, response) => {
-  console.log("Hergün Yeni Bir Pinge Selamkee!!");
-  response.sendStatus(200);
-});
-app.listen(8000);
-setInterval(() => {
-  http.get(`https://cw-deneme-v12.glitch.me/`); //ALTYAPI ADRESİNİ GİRİN.
-}, 120000)
-
-//UPTİME İÇİN
-
-//READY.JS
-
 const Discord = require('discord.js');
 const client = new Discord.Client();
 client.on('ready', async () => {
@@ -28,19 +12,14 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`CodeWork Taner Tolga Tarlacı`, { type:"WATHING" })
-  
-  console.log("CodeWork Akıyor!!")
+ client.user.setActivity(`Kinsta V12 Boş Alt Yapı`, { type:"WATHING" })
+  console.log("[BOT] Kullanıma Hazır!")
 });
 
 const log = message => {
   console.log(` ${message}`);
 };
 require('./util/eventLoader.js')(client);
-
-//READY.JS SON
-
-//KOMUT ALGILAYICI
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
@@ -114,7 +93,6 @@ client.unload = command => {
     });
 };
 
-//KOMUT ALGILAYICI SON
 
 client.elevation = message => {
     if (!message.guild) {
