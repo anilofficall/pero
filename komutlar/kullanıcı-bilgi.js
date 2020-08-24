@@ -1,12 +1,10 @@
 const Discord = require('discord.js')
 const moment = require('moment')
-
 const client = new Discord.Client();
 
 const botadi = "Darknes Code"
 
 exports.run = async (bot, msg, args) => {
-  
         let simdikitarih = moment.utc(msg.createdAt).format('DD MM YYYY');
   
         let user = msg.mentions.users.first() || msg.author;
@@ -14,20 +12,18 @@ exports.run = async (bot, msg, args) => {
         let userinfo = {};
         userinfo.avatar= user.displayAvatarURL;
         userinfo.id = user.id;
-        userinfo.od1 = msg.guild.members.get(user.id).user.presence.game || "Oynadığı Bir Oyun Yok"
+        userinfo.od1 = msg.guild.members.cache.get(user.id).user.presence.game || "Oynadığı bir oyun yok"
         userinfo.status = user.presence.status.toString()
         .replace("dnd", `Rahatsız Etmeyin`)
         .replace("online", `Çevrimiçi`)
         .replace("idle", `Boşta`)
         .replace("offline", `Çevrimdışı`)
-  
         userinfo.bot = user.bot.toString()
         .replace("false", `Hayır`)
         .replace("true", `Evet`)
+        userinfo.sonmesaj = user.lastMessage || "Son yazılan mesaj bulunamadı." || "Son yazılan mesaj gösterilemedi."
   
-        userinfo.sonmesaj = user.lastMessage || "Son Yazılan Mesaj Bulunamadı." || "Son Yazılan Mesaj Gösterilemedi."
-  
-
+        userinfo.dctarih = moment.utc(msg.guild.members.cache.get(user.id).user.createdAt).format('**YYYY** [Yılında] MMMM [Ayında] dddd [Gününde] (**DD/MM/YYYY**)')
         .replace("Monday", `**Pazartesi**`)
         .replace("Tuesday", `**Salı**`)
         .replace("Wednesday", `**Çarşamba**`)
@@ -35,7 +31,6 @@ exports.run = async (bot, msg, args) => {
         .replace("Friday", `**Cuma**`)
         .replace("Saturday", `**Cumartesi**`)
         .replace("Sunday", `**Pazar**`)
-
         .replace("January", `**Ocak**`)
         .replace("February", `**Şubat**`)
         .replace("March", `**Mart**`)
@@ -48,8 +43,7 @@ exports.run = async (bot, msg, args) => {
         .replace("October", `**Ekim**`)
         .replace("November", `**Kasım**`)
         .replace("December", `**Aralık**`)
-        userinfo.dctarihkatilma = moment.utc(msg.guild.members.get(user.id).joinedAt).format('**YYYY** [Yılında] MMMM [Ayında] dddd [Gününde] (**DD/MM/YYYY**)')
-
+        userinfo.dctarihkatilma = moment.utc(msg.guild.members.cache.get(user.id).joinedAt).format('**YYYY** [Yılında] MMMM [Ayında] dddd [Gününde] (**DD/MM/YYYY**)')
         .replace("Monday", `**Pazartesi**`)
         .replace("Tuesday", `**Salı**`)
         .replace("Wednesday", `**Çarşamba**`)
@@ -57,7 +51,6 @@ exports.run = async (bot, msg, args) => {
         .replace("Friday", `**Cuma**`)
         .replace("Saturday", `**Cumartesi**`)
         .replace("Sunday", `**Pazar**`)
-
         .replace("January", `**Ocak**`)
         .replace("February", `**Şubat**`)
         .replace("March", `**Mart**`)
@@ -70,36 +63,37 @@ exports.run = async (bot, msg, args) => {
         .replace("October", `**Ekim**`)
         .replace("November", `**Kasım**`)
         .replace("December", `**Aralık**`)
-     
+  
         const uembed = new Discord.MessageEmbed()
         
         .setAuthor(user.tag, userinfo.avatar)
         .setThumbnail(userinfo.avatar)
         
-        .setColor('BLACK')
+        .setTitle('Kullanıcı')
         
-        .setTitle('Kullanıcı;')
+        .setColor('Black')
         
-        .addField(`Şu Anda Oynadığı Oyun`, userinfo.od1, false)
+        .addField(`Şu anda oynadığı oyun`, userinfo.od1, false)
         .addField(`Durum`, userinfo.status, false)
         .addField(`Katılım Tarihi (Sunucu)`, userinfo.dctarihkatilma, false)
-        .addField(`Katılım Tarihi (Discord)`, userinfo.dctarihkatilma, false)
+        .addField(`Katılım Tarihi (Discord)`, userinfo.dctarih, false)
         .addField(`Kimlik:`, userinfo.id, true)
         .addField(`Botmu:`, userinfo.bot, true)
-        .addField(`Roller:`, `${msg.guild.members.get(user.id).roles.filter(r => r.name !== "@everyone").map(r => r).join(' **|** ') || "**Bu Kullanıcıda HiçBir Rol Bulunmuyor**"}`, false)
-        .addField(`Son Gönderdiği Mesaj:`, userinfo.sonmesaj, false)
+        .addField(`Roller:`, `${msg.guild.members.cache.get(user.id).roles.cache.filter(r => r.name !== "@everyone").map(r => r).join(' **|** ') || "**Bu kullanıcıda hiçbir rol bulunmuyor**"}`, false)
+        .addField(`Son gönderdiği mesaj:`, userinfo.sonmesaj, false)
+        .setFooter(`${botadi} Sunar :)`)
+        
         msg.channel.send(uembed)
-    }
+        }
 
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["kullanıcı-bilgi","profil"],
-  permLevel: 0
+  aliases: ['kullanıcı-bilgim','kullanıcıbilgi','kullanıcı-bilgi'],
+  permLevel: 1
 };
-
 exports.help = {
-  name: 'kullanıcı-bilgi',
+  name: 'kullanıcıbilgim',
   description: 'Darknes Code',
-  usage: 'kullanıcı-bilgi'
+  usage: 'kullanıcıbilgim'
 };
