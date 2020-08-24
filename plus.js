@@ -12,7 +12,7 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`Kinsta V12 Boş Alt Yapı`, { type:"WATHING" })
+ client.user.setActivity(`Darknes Code V12 Gif Bot`, { type:"WATHING" })
   console.log("[BOT] Kullanıma Hazır!")
 });
 
@@ -105,3 +105,29 @@ client.elevation = message => {
     return permlvl;
 };
 client.login(ayarlar.token)
+
+
+//------------------------ Halka Açık Random Gif Pp -----------------------//
+//------------------------ Halka Açık Random Gif Pp -----------------------//
+//------------------------ Halka Açık Random Gif Pp -----------------------//
+
+client.on("userUpdate", async(Revenge, NYKS) => {
+  
+if(Revenge.avatarURL === NYKS.avatarURL) return;
+let RevengePP = NYKS.avatarURL.split("?")[0]
+
+const Kanal = client.channels.filter(Revenge => Revenge.name === 'random-gif' && Revenge.type === 'text').array().forEach(Nucceteere => {
+if (RevengePP.endsWith('.gif')) {
+Nucceteere.send(new Discord.Attachment(RevengePP))
+}
+const Kanal2 = client.channels.filter(Revenge => Revenge.name === 'random-pp' && Revenge.type === 'text').array().forEach(Revenge => {
+if (!RevengePP.endsWith('.gif')) {
+Revenge.send(new Discord.Attachment(RevengePP))
+}
+})
+})
+})
+
+//------------------------ Halka Açık Random Gif Pp -----------------------//
+//------------------------ Halka Açık Random Gif Pp -----------------------//
+//------------------------ Halka Açık Random Gif Pp -----------------------//
