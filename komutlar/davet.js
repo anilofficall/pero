@@ -14,7 +14,7 @@ const embed = new Discord.MessageEmbed()
 .setFooter(`${message.author.username} Başarıyla Davet Sistemi Kullandı!`, message.author.avatarURL)
 .setColor(`BLACK`)
 
-return message.channel.sendEmbed(embed);
+return message.channel.send(embed)
   
 };
 

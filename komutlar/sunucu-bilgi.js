@@ -17,10 +17,6 @@ let sunucu = new Discord.MessageEmbed()
 .addField('Üye Sayısı :', message.guild.memberCount)
 .addField('Kanal Sayısı :', message.guild.channels.size, true)
 .addField('Rol Sayısı :', message.guild.roles.size)
-.addField('<a:online:737403809013301288> Çevrimiçi :', message.guild.members.filter(m => m.user.presence.status === "online").size)
-.addField('<a:dnd:737403808900186187> Rahatsız Etmeyin :', message.guild.members.filter(m => m.user.presence.status === 'dnd').size)
-.addField('<a:idled:737403808564510752> Boşta :', message.guild.members.filter(m => m.user.presence.status === 'idle').size)
-.addField('<a:offline:737403809231274044> Çevrimdışı :', message.guild.members.filter(m => m.user.presence.status === 'offline').size)
 
 return message.channel.send(sunucu) 
 

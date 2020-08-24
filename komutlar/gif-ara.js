@@ -10,7 +10,7 @@ if (args.length < 1) {
 const embed = new Discord.MessageEmbed()
 
 .setColor("BLACK")
-.setDescription("**Doğru Kullanım**: +gif-ara <aranacak gif>");
+.setDescription("**Doğru Kullanım**: -gif-ara <aranacak gif>");
       
 return message.channel.send(embed);
       
