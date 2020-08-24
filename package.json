@@ -1,7 +1,7 @@
 {
   "name": "hello-express",
   "version": "0.0.1",
-  "description": "Kinsta V12 Boş Alt Yapı",
+  "description": "Darknes Code V12 Gif Bot Altyapı",
   "main": "plus.js",
   "scripts": {
     "start": "node plus.js"
