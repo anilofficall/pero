@@ -4,10 +4,10 @@
 
 --------------------------------------
 
-Beyler/Bayanlar Error Veriyorsa Tools Kısmından Terminale Basın Sonra İse **Plus.js** Kısmında Hangi Modül Hata Veriyorsa ;
+Beyler/Bayanlar Error Veriyorsa Tools Kısmından Terminale Basın. 
 
---------------------------------------
+Daha Sonra **Plus.js** Kısmında Hangi Modül Hata Veriyorsa Terminale ;
 
-__pnpm i quick.db [ gibi ]__
+__pnpm i <modül ismi>__ Gibi Yazabilirsiniz. =)
 
 --------------------------------------
