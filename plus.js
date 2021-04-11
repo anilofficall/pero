@@ -12,7 +12,7 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`Darknes Code V12 Gif Bot`, { type:"WATHING" })
+ client.user.setActivity(`Astral Gif Bot`, { type:"WATHING" })
   console.log("[BOT] Kullanıma Hazır!")
 });
 

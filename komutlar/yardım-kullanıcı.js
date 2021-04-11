@@ -20,8 +20,8 @@ const embed = new Discord.MessageEmbed()
 
 :white_check_mark: **Linkler** :white_check_mark:
 
-[Botun Destek Sunucusuna Gitmek İçin Tıkla](BOTUNUZUN DAVET LİNKİ)    
-[Botu Eklemek İçin Tıkla](BOTUNUZUN DAVET LİNKİ)`)
+[Botun Destek Sunucusuna Gitmek İçin Tıkla](ttps://discord.com/oauth2/authorize?client_id=830886746085392425&permissions=268790848&scope=bot)    
+[Botu Eklemek İçin Tıkla](ttps://discord.com/oauth2/authorize?client_id=830886746085392425&permissions=268790848&scope=bot)`)
     
 message.channel.send({embed});
 }
@@ -35,6 +35,6 @@ exports.conf = {
 
 exports.help = {
   name: 'kullanıcı',
-  description: 'Darknes Code',
+  description: 'Astral Team',
   usage: 'kullanıcı'
 };

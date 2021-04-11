@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 const moment = require('moment')
 const client = new Discord.Client();
 
-const botadi = "Darknes Code"
+const botadi = "Astral Team"
 
 exports.run = async (bot, msg, args) => {
         let simdikitarih = moment.utc(msg.createdAt).format('DD MM YYYY');
@@ -94,6 +94,6 @@ exports.conf = {
 };
 exports.help = {
   name: 'kullanıcıbilgim',
-  description: 'Darknes Code',
+  description: 'Astral Team',
   usage: 'kullanıcıbilgim'
 };

@@ -34,6 +34,6 @@ exports.conf = {
 
 exports.help = {
   name: 'ping',
-  description: 'Darknes Code',
+  description: 'Astral Team',
   usage: 'ping'
 };
