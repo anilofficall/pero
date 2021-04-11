@@ -7,9 +7,9 @@ const embed = new Discord.MessageEmbed()
         
 .setTitle(`${client.user.username}`) 
 
-.addField("Yapımcılarım ", " <@733616760116215868>")
+.addField("Yapımcılarım ", " <@616393521359880202>")
 
-.setDescription(`**Botun Davet Linki ;** [TIKLA](BOTUNUZUN DAVET LINKI) \n**Destek Sunucusu ;** [TIKLA](BOTUNUZUN DAVET LINKI)`) 
+.setDescription(`**Botun Davet Linki ;** [TIKLA](https://discord.com/oauth2/authorize?client_id=830886746085392425&permissions=268790848&scope=bot) \n**Destek Sunucusu ;** [TIKLA](https://discord.com/oauth2/authorize?client_id=830886746085392425&permissions=268790848&scope=bot)`) 
 .setThumbnail(client.user.avatarURL)
 .setFooter(`${message.author.username} Başarıyla Davet Sistemi Kullandı!`, message.author.avatarURL)
 .setColor(`BLACK`)
@@ -27,6 +27,6 @@ exports.conf = {
 
 exports.help = {
   name: 'davet',
-  description: 'Darknes Code',
+  description: 'Astral Team',
   usage: 'davet'
 }; 

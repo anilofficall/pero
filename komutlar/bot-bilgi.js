@@ -16,7 +16,7 @@ exports.run = async (bot, message, args) => {
   
   .setFooter('Bot İsmi', bot.user.avatarURL)
   
-  .addField("» **Botun Sahibi**", "<@733616760116215868>")
+  .addField("» **Botun Sahibi**", "<@616393521359880202>")
   .addField("» **Bellek kullanımı**", (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + ' MB', true)  
   .addField("» **Çalışma süresi**", seksizaman)
   .addField("» **Kullanıcılar**" , bot.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString(), true)
@@ -26,7 +26,7 @@ exports.run = async (bot, message, args) => {
   .addField("» **Bit**", `\`${os.arch()}\``, true)
   .addField("» **İşletim Sistemi**", `\`\`${os.platform()}\`\``) 
   .addField("**» Bot Davet**", " [Davet Et](BOT DAVET LİNKİ)", )
-  .addField("**» Destek Sunucusu**", " [Sunucumuza Katıl](DESTEK SUNUCUSU)", )
+  .addField("**» Destek Sunucusu**", " [Sunucumuza Katıl](discord.gg/k5APdkPJxj)", )
   
   return message.channel.send(istatistikler);
   };
@@ -40,6 +40,6 @@ exports.conf = {
 
 exports.help = {
   name: "istatistik",
-  description: "Darknes Code",
+  description: "Astral Team",
   usage: "istatistik"
 };

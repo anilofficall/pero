@@ -36,7 +36,7 @@ exports.help = {
 
   name: 'anime',
 
-  description: 'Darknes Code',
+  description: 'Astral Team',
 
   usage: 'anime'
 
