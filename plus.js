@@ -12,7 +12,7 @@ client.on('ready', async () => {
     client.appInfo = await client.fetchApplication();
   }, 600);
   
- client.user.setActivity(`Astral Gif Bot`, { type:"WATHING" })
+ client.user.setActivity(`discord.gg/z2mMdD3JpZ`, { type:"WATHING" })
   console.log("[BOT] Kullanıma Hazır!")
 });
 
@@ -101,10 +101,10 @@ client.elevation = message => {
     let permlvl = 0;
     if (message.member.hasPermission("BAN_MEMBERS")) permlvl = 2;
     if (message.member.hasPermission("ADMINISTRATOR")) permlvl = 3;
-    if (message.author.id === ayarlar.sahip) permlvl = 4;
+    if (message.author.id === process.env.sahip) permlvl = 4;
     return permlvl;
 };
-client.login(ayarlar.token)
+client.login(process.env.token)
 
 
 //------------------------ Halka Açık Random Gif Pp -----------------------//

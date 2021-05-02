@@ -35,6 +35,6 @@ exports.conf = {
 
 exports.help = {
   name: 'kullanıcı',
-  description: 'Astral Team',
+  description: 'qWxnted Gif Asistan',
   usage: 'kullanıcı'
 };

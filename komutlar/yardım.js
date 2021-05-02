@@ -40,6 +40,6 @@ permLevel: 0
 
 exports.help = {
   name: 'yardım',
-  description: 'Astral Team',
+  description: 'qWxnted Gif Asistan',
   usage: 'yardım'
 };

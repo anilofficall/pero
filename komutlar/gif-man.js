@@ -36,7 +36,7 @@ exports.help = {
 
   name: 'man',
 
-  description: 'Astral Team',
+  description: 'qWxnted Gif Asistan',
 
   usage: 'man'
 

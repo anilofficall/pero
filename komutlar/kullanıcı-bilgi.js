@@ -94,6 +94,6 @@ exports.conf = {
 };
 exports.help = {
   name: 'kullanıcıbilgim',
-  description: 'Astral Team',
+  description: 'qWxnted Gif Asistan',
   usage: 'kullanıcıbilgim'
 };

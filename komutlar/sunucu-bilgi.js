@@ -31,6 +31,6 @@ guildOnly: true
 
 module.exports.help = {
 name: 'sunucubilgi',
-description: 'Astral Team',
+description: 'qWxnted Gif Asistan',
 usage: 'sunucubilgi'
 };
