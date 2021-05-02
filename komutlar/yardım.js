@@ -10,16 +10,16 @@ const embed = new Discord.MessageEmbed()
 .setColor('BLACK') 
 .addField(`:white_check_mark: Darknes Gif Bot Altyapısı :white_check_mark:`,
               
-`-**gif-ara** Yazdığınız Kelime Hakkında Gif Aratır!
--**man-gif** Rastgele Erkek Gifi Atar!
--**woman-gif** Rastgele Kadın Gifi Atar!
--**couple-gif** Rastgele Sevgili Gifi Atar!
--**baby-gif** Rastgele Bebek Gifi Atar!
--**animal-gif** Rastgele Hayvan Gifi Atar!
+`q!**gif-ara** Yazdığınız Kelime Hakkında Gif Aratır!
+q!**man-gif** Rastgele Erkek Gifi Atar!
+q!**woman-gif** Rastgele Kadın Gifi Atar!
+q!**couple-gif** Rastgele Sevgili Gifi Atar!
+q!**baby-gif** Rastgele Bebek Gifi Atar!
+q!**animal-gif** Rastgele Hayvan Gifi Atar!
 
 :white_check_mark: **Ekstra** :white_check_mark:
 
--**yardım-kullanıcı** Kullanıcı Komutlarını Gösterir!
+q!**yardım-kullanıcı** Kullanıcı Komutlarını Gösterir!
 
 :white_check_mark: **Dikkat** :white_check_mark:
 
