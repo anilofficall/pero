@@ -13,7 +13,7 @@ client.on('ready', async () => {
   }, 600);
   
  client.user.setActivity(`discord.gg/z2mMdD3JpZ`, { type:"WATHING" })
-  console.log("[BOT] Kullanıma Hazır!")
+  console.log("Gif Asistan Akıyor!!")
 });
 
 const log = message => {
