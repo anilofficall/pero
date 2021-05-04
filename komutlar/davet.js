@@ -9,7 +9,7 @@ const embed = new Discord.MessageEmbed()
 
 .addField("Yapımcılarım ", " <@616393521359880202>")
 
-.setDescription(`**Botun Davet Linki ;** [TIKLA](https://discord.com/oauth2/authorize?client_id=830886746085392425&scope=bot&permissions=805314622) \n**Destek Sunucusu ;** [TIKLA](https://discord.gg/z2mMdD3JpZ)`) 
+.setDescription(`**Botun Davet Linki ;** [TIKLA](https://discord.com/oauth2/authorize?client_id=839090050435252255&scope=bot&permissions=805314622) \n**Destek Sunucusu ;** [TIKLA](https://discord.gg/z2mMdD3JpZ)`) 
 .setThumbnail(client.user.avatarURL)
 .setFooter(`${message.author.username} Başarıyla Davet Sistemi Kullandı!`, message.author.avatarURL)
 .setColor(`BLACK`)
