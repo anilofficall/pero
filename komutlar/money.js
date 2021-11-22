@@ -27,7 +27,7 @@ let pref = await db.fetch(`prefix_${message.guild.id}`) || client.ayarlar.prefix
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
   .setThumbnail(message.author.avatarURL({dynamic:true}))
-  .addField(':money_with_wings:  P:', `${balance === null ? "0" : `${balance} TL`}`, true)
+  .addField(':money_with_wings:  Money:', `${balance === null ? "0" : `${balance} $`}`, true)
   
   
 message.channel.send(embed)
