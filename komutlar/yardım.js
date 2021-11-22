@@ -8,7 +8,7 @@ exports.run = async (client, message, args, msg) => {
 const embed = new Discord.MessageEmbed()
     
 .setColor('#0317ff') 
-.addField(`
+.setDescription(`
 
 **Bot Owner**: 
 
