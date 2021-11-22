@@ -7,26 +7,27 @@ exports.run = async (client, message, args, msg) => {
 
 const embed = new Discord.MessageEmbed()
     
-.setColor('BLACK') 
-.addField(`:white_check_mark: Darknes Gif Bot Altyapısı :white_check_mark:`,
-              
-`q!**gif-ara** Yazdığınız Kelime Hakkında Gif Aratır!
-q!**man-gif** Rastgele Erkek Gifi Atar!
-q!**woman-gif** Rastgele Kadın Gifi Atar!
-q!**couple-gif** Rastgele Sevgili Gifi Atar!
-q!**baby-gif** Rastgele Bebek Gifi Atar!
-q!**animal-gif** Rastgele Hayvan Gifi Atar!
+.setColor('#0317ff') 
+.addField(`
 
-:white_check_mark: **Ekstra** :white_check_mark:
+**Bot Owner**: 
 
-q!**yardım-kullanıcı** Kullanıcı Komutlarını Gösterir!
+**Economy**:
+\`money\` , \`robbery\` , \`dailymoney\` , \`cf\` , \`slots(soons)\`
 
-:white_check_mark: **Dikkat** :white_check_mark:
+**General**:
+\`avatar\` , \`statistics\` , \`ping\`
 
-:white_check_mark: **Linkler** :white_check_mark:
+**Moderation**:
+\`serverinfo\` ,
 
-[Botun Destek Sunucusuna Gitmek İçin Tıkla](ttps://discord.com/oauth2/authorize?client_id=830886746085392425&permissions=268790848&scope=bot)    
-[Botu Eklemek İçin Tıkla](ttps://discord.com/oauth2/authorize?client_id=830886746085392425&permissions=268790848&scope=bot)`)
+**Gif**:
+\`woman\` , \`man\` , \`couple\` , \`anime\` , \`animal\`
+
+
+
+
+`)
     
 message.channel.send({embed});
 }
