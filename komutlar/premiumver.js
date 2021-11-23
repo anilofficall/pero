@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
   const ukqzn = await db.fetch(`abonek_${message.guild.id}`)
   
   if(ukqzn == null) return message.channel.send('');
-  if (message.channel.id !== ukqzn) return message.channel.send(`Bu Komutu Sadece <#${ukqzn}> Kanalında Kullanabilirsiniz!`);
+  if (message.channel.id !== ukqzn) return message.channel.send(`This command only <#${ukqzn}> You can use it on your channel!`);
   if (ukqzn == true) return; 
   if (ukqzn == false) return message.channel.send(`system off.`);
   
