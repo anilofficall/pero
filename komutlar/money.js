@@ -20,9 +20,8 @@ exports.run = async (client, message, args) => {
 let elmas = await db.fetch(`elmascıklar_${u.id}`);
 let maaş = await db.fetch(`meslek_${u.id}`);
 let meslekA = await db.fetch(`meslekA_${u.id}`);
-let pref = await db.fetch(`prefix_${message.guild.id}`) || client.ayarlar.prefix;
 
-  let prefix = await db.fetch(`prefix_${message.guild.id}`) || client.ayarlar.prefix;
+  
 
   const embed = new Discord.MessageEmbed()
   .setColor('RANDOM')

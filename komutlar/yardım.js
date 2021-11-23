@@ -14,21 +14,23 @@ const embed = new Discord.MessageEmbed()
 [Bot İnvite](https://discord.com/oauth2/authorize?client_id=846263076068392960&scope=bot&permissions=1099511627775)
 Commands Count: ${client.commands.size}
 
-<owner:896100434069028974> **Bot Owner**: <@751717933700349972>
+<:owner:912770111025340437> **Bot Owner**: <@751717933700349972>
 
 💸 **Economy**:
-\`money\` , \`robbery\` , \`dailymoney\` , \`cf\` , \`slots(soons)\`
+\`money\` , \`robbery\` , \`dailymoney\` , \`cf\` , \`send\` , \`slots(soons)\`
 
-<a:895719196183367740:895719196183367740> **General**:
+<:895719196183367740:895719196183367740> **General**:
 \`avatar\` , \`statistics\` , \`ping\`
 
-<a:895719126528557086:895719126528557086> **Moderation**:
-\`serverinfo\` ,
+<:895719126528557086:895719126528557086> **Moderation**:
+\`serverinfo\` , \`emojiinfo\`
 
-<a:895719185253031976:895719185253031976>**Gif**:
+<:895719185253031976:912769684384915477> **Gif**:
 \`woman\` , \`man\` , \`couple\` , \`anime\` , \`animal\`
 
+<:dev:912778238802141205> **Developer**:
 
+\`reboot\`
 
 
 `)
