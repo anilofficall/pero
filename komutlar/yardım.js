@@ -32,6 +32,8 @@ Commands Count: ${client.commands.size}
 
 
 `)
+
+.setImage('https://cdn.discordapp.com/attachments/904765929664176221/912766699114209370/standard_3.gif')
     
 message.channel.send({embed});
 }
@@ -44,7 +46,7 @@ permLevel: 0
 };
 
 exports.help = {
-  name: 'gif-yardım',
+  name: '',
   description: 'qWxnted Gif Asistan',
   usage: 'gif-yardım'
 };
