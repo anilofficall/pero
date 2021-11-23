@@ -19,10 +19,10 @@ Commands Count: ${client.commands.size}
 💸 **Economy**:
 \`money\` , \`robbery\` , \`dailymoney\` , \`cf\` , \`send\` , \`slots(soons)\`
 
-<:895719196183367740:895719196> **General**:
+<:895719196183367740:912769684305240084> **General**:
 \`avatar\` , \`statistics\` , \`ping\`
 
-<:895719126528557086:895719126528557086> **Moderation**:
+<:895719126528557086:912769684250701825> **Moderation**:
 \`serverinfo\` , \`emojiinfo\`
 
 <:895719185253031976:912769684384915477> **Gif**:
