@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const frenzydb = require("quick.db")
-const frenzyms = require('parse-ms')
+const frenzyms = require('ms')
 exports.run = async(client, message, args) => { 
 let balance = await frenzydb.fetch(`paracık_${message.author.id}`)
 let polisler = ['var', 'yok']

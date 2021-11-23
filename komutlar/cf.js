@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 const db = require('quick.db')
-const ms = require('parse-ms')
+const ms = require('ms')
 exports.run = async (client, message, args) => {
   let paracık = db.fetch(`paracık_${message.author.id}`) 
   

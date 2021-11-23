@@ -10,7 +10,11 @@ const embed = new Discord.MessageEmbed()
 .setColor('#0317ff') 
 .setDescription(`
 
-**Bot Owner**: 
+[Support Server](https://discord.gg/eE3W4DKksF)
+[Bot İnvite](https://discord.com/oauth2/authorize?client_id=846263076068392960&scope=bot&permissions=1099511627775)
+Commands Count: ${client.commands.size}
+
+**Bot Owner**: <@751717933700349972>
 
 **Economy**:
 \`money\` , \`robbery\` , \`dailymoney\` , \`cf\` , \`slots(soons)\`

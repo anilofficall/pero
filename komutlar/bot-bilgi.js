@@ -16,17 +16,17 @@ exports.run = async (bot, message, args) => {
   
   .setFooter('Bot İsmi', bot.user.avatarURL)
   
-  .addField("» **Botun Sahibi**", "<@616393521359880202>")
-  .addField("» **Bellek kullanımı**", (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + ' MB', true)  
-  .addField("» **Çalışma süresi**", seksizaman)
-  .addField("» **Kullanıcılar**" , bot.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString(), true)
-  .addField("» **Discord.JS sürüm**", "v"+Discord.version, true)
-  .addField("» **Node.JS sürüm**", `${process.version}`, true)
+  .addField("» **Bot Owner**", "<@616393521359880202>")
+  .addField("» **Memory**", (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + ' MB', true)  
+  .addField("» **Uptime**", seksizaman)
+  .addField("» **Users**" , bot.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString(), true)
+  .addField("» **Discord.JS version**", "v"+Discord.version, true)
+  .addField("» **Node.JS version**", `${process.version}`, true)
   .addField("» **CPU**", `\`\`\`md\n${os.cpus().map(i => `${i.model}`)[0]}\`\`\``)
   .addField("» **Bit**", `\`${os.arch()}\``, true)
-  .addField("» **İşletim Sistemi**", `\`\`${os.platform()}\`\``) 
-  .addField("**» Bot Davet**", " [Davet Et](BOT DAVET LİNKİ)", )
-  .addField("**» Destek Sunucusu**", " [Sunucumuza Katıl](discord.gg/k5APdkPJxj)", )
+  .addField("» **OS**", `\`\`${os.platform()}\`\``) 
+  .addField("**» Bot Invite**", " [Davet Et](BOT DAVET LİNKİ)", )
+  .addField("**» Support Server**", " [Sunucumuza Katıl](discord.gg/k5APdkPJxj)", )
   
   return message.channel.send(istatistikler);
   };
@@ -39,7 +39,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "istatistik",
+  name: "statistics",
   description: "Astral Team",
   usage: "istatistik"
 };
