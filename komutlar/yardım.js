@@ -19,11 +19,14 @@ Commands Count: ${client.commands.size}
 💸 **Economy**:
 \`money\` , \`robbery\` , \`dailymoney\` , \`cf\` , \`send\` , \`slots(soons)\`
 
+🤪 **Fun**:
+\`hangman\` , \`goal\` , \`police\`  , \`fbi\`
+
 <:895719196183367740:912769684305240084> **General**:
 \`avatar\` , \`statistics\` , \`ping\`
 
 <:895719126528557086:912769684250701825> **Moderation**:
-\`serverinfo\` , \`emojiinfo\`
+\`serverinfo\` , \`emojiinfo\` , \`autotag\`
 
 <:895719185253031976:912769684384915477> **Gif**:
 \`woman\` , \`man\` , \`couple\` , \`anime\` , \`animal\`
@@ -31,8 +34,6 @@ Commands Count: ${client.commands.size}
 <:dev:912778238802141205> **Developer**:
 \`reboot\`
 
-**Premium**:
-\`level
 `)
 
 .setImage('https://cdn.discordapp.com/attachments/904765929664176221/912766699114209370/standard_3.gif')
