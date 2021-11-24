@@ -25,8 +25,7 @@ exports.run = async (bot, message, args) => {
   .addField("» **CPU**", `\`\`\`md\n${os.cpus().map(i => `${i.model}`)[0]}\`\`\``)
   .addField("» **Bit**", `\`${os.arch()}\``, true)
   .addField("» **OS**", `\`\`${os.platform()}\`\``) 
-  .addField("**» Bot Invite**", " [Davet Et](BOT DAVET LİNKİ)", )
-  .addField("**» Support Server**", " [Sunucumuza Katıl](discord.gg/k5APdkPJxj)", )
+  
   
   return message.channel.send(istatistikler);
   };

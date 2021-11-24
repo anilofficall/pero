@@ -29,10 +29,10 @@ Commands Count: ${client.commands.size}
 \`woman\` , \`man\` , \`couple\` , \`anime\` , \`animal\`
 
 <:dev:912778238802141205> **Developer**:
-
 \`reboot\`
 
-
+**Premium**:
+\`level
 `)
 
 .setImage('https://cdn.discordapp.com/attachments/904765929664176221/912766699114209370/standard_3.gif')
