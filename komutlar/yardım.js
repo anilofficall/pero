@@ -14,19 +14,19 @@ const embed = new Discord.MessageEmbed()
 [Bot İnvite](https://discord.com/oauth2/authorize?client_id=846263076068392960&scope=bot&permissions=1099511627775)
 Commands Count: ${client.commands.size}
 
-<:owner:912770111025340437> **Bot Owner**: <@751717933700349972>
+       <:owner:912770111025340437> **Bot Owner**: <@751717933700349972>
 
 💸 **Economy**:
 \`money\` , \`robbery\` , \`dailymoney\` , \`cf\` , \`send\` , \`slots(soons)\`
 
 🤪 **Fun**:
-\`hangman\` , \`goal\` , \`police\`  , \`fbi\`
+\`hangman(soons)\` , \`goal\` , \`police\`  , \`fbi\`
 
 <:895719196183367740:912769684305240084> **General**:
 \`avatar\` , \`statistics\` , \`ping\`
 
 <:895719126528557086:912769684250701825> **Moderation**:
-\`serverinfo\` , \`emojiinfo\` , \`autotag\`
+\`serverinfo\` , \`emojiinfo\` , \`autotag\` , \`ban\`
 
 <:895719185253031976:912769684384915477> **Gif**:
 \`woman\` , \`man\` , \`couple\` , \`anime\` , \`animal\`
