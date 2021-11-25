@@ -16,7 +16,7 @@ exports.run = async (bot, message, args) => {
   
   .setFooter('Bot İsmi', bot.user.avatarURL)
   
-  .addField("» **Bot Owner**", "<@616393521359880202>")
+  .addField("» **Bot Owner**", "<@751717933700349972>")
   .addField("» **Memory**", (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + ' MB', true)  
   .addField("» **Uptime**", seksizaman)
   .addField("» **Users**" , bot.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString(), true)

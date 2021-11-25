@@ -17,6 +17,20 @@ module.exports = message => {
   let params = message.content.split(' ').slice(1);
   let perms = client.elevation(message);
   let cmd;
+  
+  if (message.author.bot) return;
+        if (!message.content.startsWith(ayarlar.prefix)) return;
+        if (!client.commands.has(command)) {
+            if (client.aliases.has(command)) {
+                return false;
+            } else {
+                const cs= new Discord.MessageEmbed()
+                .setColor('#ff0000')
+                .setDescription(`Unfortunately I couldn't find a command named ${command} in the bot. Can you try again? \n\n**.yardım** `)
+                .setFooter('Pero')
+                message.channel.send(cs)
+  }
+        }
   if (client.commands.has(command)) {
     cmd = client.commands.get(command);
   } else if (client.aliases.has(command)) {
