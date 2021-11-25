@@ -26,9 +26,11 @@ module.exports = message => {
             } else {
                 const cs= new Discord.MessageEmbed()
                 .setColor('#ff0000')
-                .setDescription(`Unfortunately I couldn't find a command named ${command} in the bot. Can you try again? \n\n**.yardım** `)
+                .setDescription(`Unfortunately I couldn't find a command named \`${command}\` in the bot. Can you try again? \n\n**.yardım** `)
                 .setFooter('Pero')
                 message.channel.send(cs)
+              
+              
   }
         }
   if (client.commands.has(command)) {

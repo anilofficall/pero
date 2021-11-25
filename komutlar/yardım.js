@@ -49,7 +49,7 @@ permLevel: 0
 };
 
 exports.help = {
-  name: '',
+  name: 'help',
   description: 'qWxnted Gif Asistan',
   usage: 'gif-yardım'
 };
