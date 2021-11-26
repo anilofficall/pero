@@ -131,3 +131,36 @@ Revenge.send(new Discord.Attachment(RevengePP))
 //------------------------ Halka Açık Random Gif Pp -----------------------//
 //------------------------ Halka Açık Random Gif Pp -----------------------//
 //------------------------ Halka Açık Random Gif Pp -----------------------//
+
+//eklendim atıldım başlangıç//
+
+client.on("guildCreate", guild => {
+  let dcs_kanal = client.channels.cache.get("EKLENINCE MESAJ GELECEK KANAL ID YAZIN")
+guild.channels
+    .cache.filter(mr => mr.type === "text")
+    .random()
+    .createInvite()
+    .then(async invite => {
+      const dcs = new Discord.MessageEmbed()
+        .setTitle("Server Closed")
+        .setColor("GREEN")
+        .addField("▪ Sunucu İsmi", `\`${guild.name}\``)
+        .addField("▪ Üye Sayısı", `\`${guild.members.cache.size}\``)
+        .addField("▪ Kurucu", `\`${guild.owner.user.tag}\``)
+        .addField("Davet", `https://discord.gg/${invite.code}`);
+      dcs_kanal.send(dcs);
+    });
+});
+
+
+client.on("guildDelete", guild => {
+  let dcs_kanal = client.channels.cache.get("ATILINCA MESAJ GELECEK KANAL ID YAZIN")
+
+ const dcs = new Discord.MessageEmbed()
+.setTitle("Server Open")
+.setColor("RED")
+.addField('▪ Sunucu Name', `\`${guild.name}\``)
+.addField('▪ Number of Members', `\`${guild.members.cache.size}\``)
+.addField('▪ Owner', `\`${guild.owner.user.tag}\``)
+dcs_kanal.send(dcs)
+});     
